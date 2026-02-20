@@ -10,10 +10,6 @@ Route::get('acceuil', function(){
     echo 'Bienvenue sur le site';
 });
 
-Route::get('{n}', function($n){
-    return 'Je suis la page ' . $n . " !";
-});
-
 Route::get('/test1', function(){
     return view('testvue1');
 });
@@ -43,3 +39,7 @@ Route::get('/home', function () {
 Route::get('/pageprincipale', function () {
     return view('pageprincipale');
 });
+
+// Route::get('{n}', function($n){
+//     return 'Je suis la page ' . $n . " !";
+// });
