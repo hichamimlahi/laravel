@@ -36,10 +36,6 @@ Route::get('/home', function () {
     return view('home');
 });
 
-Route::get('/pageprincipale', function () {
-    return view('pageprincipale');
-});
-
 // Route::get('{n}', function($n){
 //     return 'Je suis la page ' . $n . " !";
 // });
