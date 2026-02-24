@@ -36,6 +36,20 @@ Route::get('/home', function () {
     return view('home');
 });
 
+Route::get('/tp6_ex1', function () {
+    return view('TP6_ex1');
+});
+
 // Route::get('{n}', function($n){
 //     return 'Je suis la page ' . $n . " !";
 // });
+
+Route::get('/form1', function(){
+    return view('form1');
+});
+
+// Route::post('/form2', function(){
+//     return view('form2');
+// });
+
+Route::post('/form2', 'App\Http\Controllers\MyController@getData');
