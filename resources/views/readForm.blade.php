@@ -9,6 +9,7 @@
     <ul>
         <li>Le nom est : {{$name}}</li>
         <li>L'email : {{$email}}</li>
+        <li>Le telephone : {{$tele}}</li>
         <li>Le mot de passe : {{$pw}}</li>
     </ul>
 </body>
