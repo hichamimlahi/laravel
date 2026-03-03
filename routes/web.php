@@ -53,3 +53,17 @@ Route::get('/form1', function(){
 // });
 
 Route::post('/form2', 'App\Http\Controllers\MyController@getData');
+
+Route::get('/', '\App\Http\Controllers\cl_tp6insert@getDataFromDB');
+
+Route::view('/ajout', 'ajout');
+
+Route::post('/saveAjout', '\App\Http\Controllers\cl_tp6insert@InsertData');
+
+Route::get('/modif/{c}', 'App\Http\Controllers\cl_tp6insert@updateData');
+
+Route::post('/saveModif', 'App\Http\Controllers\cl_tp6insert@saveData');
+
+Route::get('/Rechercher', 'App\Http\Controllers\cl_tp6insert@rechercher');
+
+Route::get('/AfficherTs', 'App\Http\Controllers\cl_tp6insert@getDataFromDb');

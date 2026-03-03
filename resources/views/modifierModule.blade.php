@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST" action="/saveModif">
+        @csrf
+        <pre>
+            <label>Code Module</label>
+            <input type="text" name='codem' value="{{$mod[0]->CodeM}}">
+            
+            <label>Titre Module</label>
+            <input type="text" name='titrem' value="{{$mod[0]->titre}}">
+            
+            <label>Masse Horaire</label>
+            <input type="text" name='mh' value="{{$mod[0]->masseH}}">
+
+            <button>Modifier</button>
+        </pre>
+    </form>
+</body>
+</html>
