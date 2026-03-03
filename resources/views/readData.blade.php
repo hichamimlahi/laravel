@@ -14,9 +14,9 @@
             <th>Masse Horaire</th>
             <th></th>
         </tr>
-        @foreach($modules as module)
+        @foreach($modules as $module)
         <tr>
-            <td>{{$module -> codeM}}</td>
+            <td>{{$module -> CodeM}}</td>
             <td>{{$module -> Titre}}</td>
             <td>{{$module -> MH}}</td>
             <td>
