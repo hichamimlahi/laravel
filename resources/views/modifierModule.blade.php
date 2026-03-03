@@ -10,13 +10,13 @@
         @csrf
         <pre>
             <label>Code Module</label>
-            <input type="text" name='codem' value="{{$mod[0]->CodeM}}">
+            <input type="text" name='codem' value="{{$mod[0]->codem}}">
             
-            <label>Titre Module</label>
-            <input type="text" name='titrem' value="{{$mod[0]->titre}}">
+            <label>titre Module</label>
+            <input type="text" name='titre' value="{{$mod[0]->titre}}">
             
             <label>Masse Horaire</label>
-            <input type="text" name='mh' value="{{$mod[0]->masseH}}">
+            <input type="text" name='masseh' value="{{$mod[0]->masseh}}">
 
             <button>Modifier</button>
         </pre>

@@ -16,26 +16,26 @@ class cl_tp6insert extends Controller
         $request->validate([
             'codem' => 'required',
             'titrem' => 'required',
-            'mh' => 'required'
+            'masseh' => 'required'
         ]);
         $codem = $request -> codem;
         $titre = $request -> titrem;
-        $mh = $request -> mh;
-        $n = DB::insert('insert into Module values(?, ?, ?)', [$codem, $titre, $mh]);
+        $masseh = $request -> masseh;
+        $n = DB::insert('insert into Module values(?, ?, ?)', [$codem, $titre, $masseh]);
         return redirect('/');
     }
     
     public function updateData($code){
-        $m = DB::select('select * from module where CodeM=?', [$code]);
+        $m = DB::select('select * from module where codem=?', [$code]);
         return view('modifierModule', ["mod" => $m]);
     }
 
-    public function savaData(Request $request){
+    public function saveData(Request $request){
         $codem = $request -> codem;
-        $titre = $request -> titrem;
-        $mh = $request -> mh;
+        $titre = $request -> titre;
+        $masseh = $request -> masseh;
 
-        $n = DB::update('update module set CodeM=?, titre=?, masseH=? where codem=?', [$codem, $titre, $mh, $codem]);
+        $n = DB::update('update module set codem=?, titre=?, masseh=? where codem= ?', [$codem, $titre, $masseh, $codem]);
         return redirect('/');
     }
 

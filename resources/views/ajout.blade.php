@@ -10,16 +10,17 @@
         @csrf
         <pre>
             <label>Code Module</label>
-            <input type="text" name="codem" id="codem">
+            <input type="number" name="codem" id="codem">
             
             <label>Titre Module</label>
             <input type="text" name="titrem" id="codem">
             
             <label>Masse Horaire</label>
-            <input type="text" name="mh" id="mh">
+            <input type="number" name="masseh" id="masseh">
 
             <button>Ajouter</button>
         </pre>
+        <!-- <a href="/">retourner</a> -->
     </form>
 </body>
 </html>

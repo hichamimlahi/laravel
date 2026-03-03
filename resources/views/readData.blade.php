@@ -6,22 +6,23 @@
     <title>Document</title>
 </head>
 <body>
+    <a href="/ajout">Ajouter un nouveau module</a>
     <h1>Les modules</h1>
     <table>
         <tr>
-            <th>CodeM</th>
+            <th>codem</th>
             <th>Titre</th>
             <th>Masse Horaire</th>
             <th></th>
         </tr>
         @foreach($modules as $module)
         <tr>
-            <td>{{$module -> CodeM}}</td>
-            <td>{{$module -> Titre}}</td>
-            <td>{{$module -> MH}}</td>
+            <td>{{$module -> codem}}</td>
+            <td>{{$module -> titre}}</td>
+            <td>{{$module -> masseh}}</td>
             <td>
-                <a href="/modif/{{$module -> CodeM}}">Modifier</a>
-                <a href="/supp/{{$module -> CodeM}}">Supprimer</a>
+                <a href="/modif/{{$module -> codem}}">Modifier</a>
+                <a href="/supp/{{$module -> codem}}">Supprimer</a>
             </td>
         </tr>
         @endforeach

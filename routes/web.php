@@ -67,3 +67,5 @@ Route::post('/saveModif', 'App\Http\Controllers\cl_tp6insert@saveData');
 Route::get('/Rechercher', 'App\Http\Controllers\cl_tp6insert@rechercher');
 
 Route::get('/AfficherTs', 'App\Http\Controllers\cl_tp6insert@getDataFromDb');
+
+Route::get('/supp/{c}', 'App\Http\Controllers\cl_tp6insert@deleteData');
