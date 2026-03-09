@@ -69,3 +69,7 @@ Route::get('/Rechercher', 'App\Http\Controllers\cl_tp6insert@rechercher');
 Route::get('/AfficherTs', 'App\Http\Controllers\cl_tp6insert@getDataFromDb');
 
 Route::get('/supp/{c}', 'App\Http\Controllers\cl_tp6insert@deleteData');
+
+Route::get('/contact', function(){
+    return view('contact');
+})->middleware("user");

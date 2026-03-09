@@ -10,9 +10,16 @@ return Application::configure(basePath: dirname(__DIR__))
         commands: __DIR__.'/../routes/console.php',
         health: '/up',
     )
-    ->withMiddleware(function (Middleware $middleware): void {
-        //
+    ->withMiddleware(function (Middleware $middleware) {
+        
+        // C'est ici que vous remplacez le rôle de l'ancien Kernel !
+        // Ajoutez vos alias comme ceci :
+        $middleware->alias([
+            'test' => \App\Http\Middleware\testMiddleware::class,
+            'User' => \App\Http\Middleware\UserMiddleware::class,
+        ]);
+
     })
-    ->withExceptions(function (Exceptions $exceptions): void {
+    ->withExceptions(function (Exceptions $exceptions) {
         //
     })->create();
